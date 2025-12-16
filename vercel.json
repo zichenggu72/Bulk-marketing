@@ -1,0 +1,8 @@
+{
+  "buildCommand": "cd sparkle-clean && npm install && npm run build",
+  "outputDirectory": "sparkle-clean/build",
+  "framework": null,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
