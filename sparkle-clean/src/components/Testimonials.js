@@ -3,7 +3,6 @@ import React from 'react';
 const Testimonials = () => {
   return (
     <section>
-      <h2 className="font-display text-text-light dark:text-text-dark px-4 pb-3 pt-5 text-2xl font-bold leading-tight tracking-tighter">What Our Clients Say</h2>
       <div className="flex flex-col gap-4 p-4">
         <div className="flex flex-col gap-3 rounded-lg border border-border-light bg-background-light p-4 dark:border-border-dark dark:bg-background-dark">
           <div className="flex text-primary">
