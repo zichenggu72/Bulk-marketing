@@ -3,27 +3,31 @@ import { useState } from 'react';
 const PhotoCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Placeholder images - replace with actual before/after cleaning photos
+  // Before and after cleaning photos
   const photos = [
     {
-      src: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=600&fit=crop',
-      alt: 'Sparkling clean kitchen',
-      caption: 'Kitchen deep clean'
+      before: '/before1.jpeg',
+      after: '/after1.jpeg',
+      alt: 'Kitchen transformation',
+      caption: 'Kitchen Before & After'
     },
     {
-      src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&h=600&fit=crop',
-      alt: 'Clean bathroom',
-      caption: 'Bathroom transformation'
+      before: '/before2.jpeg',
+      after: '/after2.jpeg',
+      alt: 'Bathroom cleaning',
+      caption: 'Bathroom Before & After'
     },
     {
-      src: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop',
-      alt: 'Clean living room',
-      caption: 'Living room refresh'
+      before: '/before3.jpeg',
+      after: '/after3.jpeg',
+      alt: 'Living room refresh',
+      caption: 'Living Room Before & After'
     },
     {
-      src: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop',
-      alt: 'Clean bedroom',
-      caption: 'Vacation rental turnover'
+      before: '/before4.jpeg',
+      after: '/after4.jpeg',
+      alt: 'Bedroom cleaning',
+      caption: 'Bedroom Before & After'
     },
   ];
 
@@ -51,13 +55,29 @@ const PhotoCarousel = () => {
           >
             {photos.map((photo, index) => (
               <div key={index} className="min-w-full">
-                <img
-                  src={photo.src}
-                  alt={photo.alt}
-                  className="h-[280px] w-full object-cover sm:h-[360px]"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                  <p className="font-body text-sm font-medium text-white">{photo.caption}</p>
+                <div className="grid grid-cols-2 gap-2">
+                  {/* Before Image */}
+                  <div className="relative">
+                    <img
+                      src={photo.before}
+                      alt={`${photo.alt} - Before`}
+                      className="h-[280px] w-full object-cover sm:h-[360px]"
+                    />
+                    <div className="absolute top-2 left-2 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                      Before
+                    </div>
+                  </div>
+                  {/* After Image */}
+                  <div className="relative">
+                    <img
+                      src={photo.after}
+                      alt={`${photo.alt} - After`}
+                      className="h-[280px] w-full object-cover sm:h-[360px]"
+                    />
+                    <div className="absolute top-2 left-2 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                      After
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}

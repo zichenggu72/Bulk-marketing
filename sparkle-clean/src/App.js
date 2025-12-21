@@ -6,6 +6,7 @@ import ServiceAreaMap from './components/ServiceAreaMap';
 import WhyChooseUs from './components/WhyChooseUs';
 import PhotoCarousel from './components/PhotoCarousel';
 import Testimonials from './components/Testimonials';
+import PaymentOptions from './components/PaymentOptions';
 import Footer from './components/Footer';
 import InstantQuoteModal from './components/InstantQuoteModal';
 import ChatWidget from './components/ChatWidget';
@@ -31,6 +32,7 @@ function App() {
         <WhyChooseUs />
         <PhotoCarousel />
         <Testimonials />
+        <PaymentOptions />
       </main>
       <Footer />
       <InstantQuoteModal isOpen={isModalOpen} onClose={handleCloseModal} />

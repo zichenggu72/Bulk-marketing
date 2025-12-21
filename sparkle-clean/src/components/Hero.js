@@ -14,7 +14,7 @@ const Hero = ({ onQuoteClick }) => {
           style={heroStyle}
         >
           <div className="flex flex-col gap-2 text-left">
-            <h1 className="font-display text-4xl font-medium leading-tight tracking-normal text-white sm:text-5xl">Elite Vacation Rental & Residential Cleaning</h1>
+            <h1 className="font-display text-3xl font-medium leading-tight tracking-normal text-white sm:text-5xl">Elite Vacation Rental & Residential Cleaning</h1>
             <h2 className="font-body text-base font-medium leading-normal text-white/90 sm:text-lg">Your trustworthy women-owned cleaning team since 2020</h2>
           </div>
           <a
