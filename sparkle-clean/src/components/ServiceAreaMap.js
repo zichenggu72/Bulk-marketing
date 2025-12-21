@@ -452,7 +452,7 @@ const masonCountyOptions = {
 };
 
 const ServiceAreaMap = () => {
-  const [map, setMap] = useState(null);
+  const [, setMap] = useState(null);
 
   const { isLoaded, loadError } = useJsApiLoader({
     id: 'google-map-script',
